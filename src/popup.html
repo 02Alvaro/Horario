@@ -1,44 +1,58 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <title>Extension Menu</title>
-    <style>
-      html,
-      body {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        overflow: hidden;
-        background-color: rgba(0, 0, 0, 0.842);
-      }
-    </style>
-  </head>
-  <body>
+<head>
+  <title>Extension Menu</title>
+  <style>
+    html, body {
+      margin: 0;
+      padding: 0;
+      max-width: 100%;
+      overflow-x: hidden;
+    }
+    table {
+      width: 100%;
+    }
+    button, input {
+      font-size: small;
+      width: 100%;
+      box-sizing: border-box;
+      margin: 2px 0;
+    }
+  </style>
+</head>
+<body>
+  <div class="table-container">
     <table>
       <tr>
-        <td>
-          <button class="Btn" id="edit">Edit Table</button>
-        </td>
-        <td>
-          <button class="Btn" id="reset">Original table</button>
-        </td>
-        <td>
-          <button class="Btn" id="download">Download table</button>
-        </td>
+        <td><button class="Btn" id="edit">Edit Table</button></td>
+        <td><button class="Btn" id="reset">Original table</button></td>
+        <td><button class="Btn" id="download">Download table</button></td>
       </tr>
       <tr>
-        <td>
-          <button class="Btn" id="save">Save Table</button>
-        </td>
-        <td>
-          <button class="Btn" id="get">Saved table</button>
-        </td>
-        <td>
-          <button class="Btn" id="delete">Delete storage</button>
-        </td>
+        <td><button class="Btn" id="save">Save Table</button></td>
+        <td><button class="Btn" id="get">Saved table</button></td>
+        <td><button class="Btn" id="delete">Delete storage</button></td>
+      </tr>
+      <tr>
+        <td><button class="BtnColors" id="resetColors">Reset Colors</button></td>
+        <td><button class="BtnColors" id="apply">Apply Colors</button></td>
+        <td><button class="BtnColors" id="deleteColors">Delete Colors</button></td>
       </tr>
     </table>
+    <table> 
+      <tr>
+        <td><input type="color" id="teoria1">Color 1</input></td>
+        <td><input type="color" id="teoria2">Color 2</input></td>
+        <td><input type="color" id="teoria3">Color 3</input></td>
+      </tr>
+      <tr>
+        <td><input type="color" id="teoria4">Color 4</input></td>
+        <td><input type="color" id="teoria5">Color 5</input></td>
+      </tr>
+    </table>
+  </div>
 
-    <script src="popup.js"></script>
-  </body>
+  <script src="popup.js"></script>
+  <script src="popup_colors.js"></script>
+</body>
 </html>
