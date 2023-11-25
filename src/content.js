@@ -13,13 +13,15 @@ if (window.name === 'main') {
       resetTable();
     },
     download: downloadTable,
+    applyColors: applyColors,
+    deleteColors: deleteColors,
   };
 
   chrome.runtime.onMessage.addListener((request, sender, sendResponse) => {
     stopEditingTable();
     const action = contentActions[request.action];
     if (action) {
-      action();
+      (request.colors) ? action(request.colors) : action();
     } else {
       sendResponse({ status: 'error', message: 'Invalid action' });
     }
